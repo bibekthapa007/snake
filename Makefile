@@ -1,12 +1,12 @@
-OBJS = snake.o
+OBJS = main.o Snake.o Food.o  BaseObject.o
 CXX = g++
 CXXFLAGS = -Wall -std=c++11
 LDLIBS =  -lsfml-audio -lsfml-window -lsfml-system -lsfml-graphics
-
-LDFLAGS = -L/usr/lib/SFML/lib
+# IFLAGS = -I./**
+LDFLAGS = -L/usr/lib/SFML/lib 
 
 game: $(OBJS)
-	$(CXX) -o snake $(OBJS) $(LDLIBS) $(LDFLAGS)
+	$(CXX)  -o main $(OBJS) $(LDLIBS) $(LDFLAGS) ${IFLAGS} ${CXXFLAGS}
 
 clean:
-	$(RM) snake $(OBJS)
+	$(RM) main $(OBJS)

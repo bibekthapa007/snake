@@ -6,7 +6,7 @@
     {
       "type": "shell",
       "label": "gcc build active file",
-      "command": "g++ -g main.cpp -o main -lsfml-audio -lsfml-window -lsfml-system -lsfml-graphics -L/usr/lib/SFML/lib && ./main",
+      "command": "make clean && make && ./main",
       "group": {
         "kind": "build",
         "isDefault": true
